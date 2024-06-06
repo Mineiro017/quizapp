@@ -9,9 +9,8 @@ botaoTema.addEventListener("click", () => {
 
 verificarTema(body, botaoTema)
 
-const botoesAssuntto = document.querySelectorAll("assuntos button")
+const botoesAssuntto = document.querySelectorAll(".assuntos button")
 
-botoesAssuntto.forEach()
 botoesAssuntto.forEach(botao => {
     botao.addEventListener("click", selecionarAssunto)
 })
