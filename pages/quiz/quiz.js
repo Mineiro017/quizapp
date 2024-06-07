@@ -107,7 +107,7 @@ function montarPergunta () {
 }
 
 function alterarSinais(texto) {
-    return texto.replace(/</g, "&lt;".replace(/>/g, "&gt;"))
+    return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;")
 }
 
 function guardarResposta(evento) {
