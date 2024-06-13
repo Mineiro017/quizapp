@@ -48,15 +48,15 @@ async function buscarPerguntas() {
 }
 
 
-function montarPergunta () {
+function montarPergunta() {
     const main = document.querySelector("main")
-    
-    main.innerHTML = ` 
+
+    main.innerHTML = `
         <section class="pergunta">
             <div>
-            <p>Questão ${pergunta} de 10</p>
+                <p>Questão ${pergunta} de 10</p>
 
-            <h2>${alterarSinais(quiz.questions[pergunta-1].question)}<h2>
+                <h2>${alterarSinais(quiz.questions[pergunta-1].question)}</h2>
             </div>
             <div class="barra_progresso">
                 <div style="width: ${pergunta * 10}%"></div>
@@ -65,7 +65,7 @@ function montarPergunta () {
 
         <section class="alternativas">
             <form action="">
-                <label for="alternativa_a" >
+                <label for="alternativa_a">
                     <input type="radio" id="alternativa_a" name="alternativa" value="${alterarSinais(quiz.questions[pergunta-1].options[0])}">
 
                     <div>
@@ -74,7 +74,7 @@ function montarPergunta () {
                     </div>
                 </label>
 
-                <label for="alternativa_b" >
+                <label for="alternativa_b">
                     <input type="radio" id="alternativa_b" name="alternativa" value="${alterarSinais(quiz.questions[pergunta-1].options[1])}">
 
                     <div>
@@ -92,8 +92,8 @@ function montarPergunta () {
                     </div>
                 </label>
 
-                <label for="alternativa_d" >
-                    <input type="radio" id="alternativa_d" name="alternativa" value"${alterarSinais(quiz.questions[pergunta-1].options[3])}">
+                <label for="alternativa_d">
+                    <input type="radio" id="alternativa_d" name="alternativa" value="${alterarSinais(quiz.questions[pergunta-1].options[3])}">
 
                     <div>
                         <span>D</span>
@@ -103,7 +103,8 @@ function montarPergunta () {
             </form>
 
             <button>Responder</button>
-        </section>`
+        </section>
+    `
 }
 
 function alterarSinais(texto) {
@@ -141,7 +142,7 @@ function validarResposta() {
     }
 
     pergunta = pergunta + 1
-    console.log(pergunta)
+    console.log(respostaCorretaId)
 }
 
 function finalizar() {
